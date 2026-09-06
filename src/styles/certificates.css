@@ -1,0 +1,261 @@
+.certificates-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 115px 0 130px;
+
+  background:
+    linear-gradient(
+      115deg,
+      rgba(0, 35, 130, 0.07),
+      transparent 45%
+    ),
+    #02040c;
+}
+
+.certificates-blue-light {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: -300px;
+  top: 100px;
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 60, 255, 0.15),
+    transparent 70%
+  );
+
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.certificates-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 70px;
+}
+
+.certificates-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.certificates-title-row h2 {
+  margin: 0;
+
+  font-family: var(--heading-font);
+  font-size: clamp(3.4rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 0.95;
+
+  background: linear-gradient(
+    90deg,
+    #f3f5fa,
+    #f3f5fa 35%,
+    #5685ff 75%,
+    #003cff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.certificate-count {
+  color: #46536d;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+}
+
+.certificates-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.certificate-card {
+  position: relative;
+
+  min-height: 300px;
+  padding: 28px;
+
+  text-align: left;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(12, 25, 55, 0.85),
+      rgba(3, 7, 18, 0.9)
+    );
+
+  border: 1px solid rgba(85, 110, 170, 0.2);
+  border-radius: 6px;
+
+  color: white;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(45, 100, 255, 0.6);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 35, 80, 0.9),
+      rgba(3, 7, 18, 0.95)
+    );
+}
+
+.certificate-top {
+  display: flex;
+  justify-content: space-between;
+
+  color: #66738d;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.certificate-top svg {
+  color: #4d78ff;
+}
+
+.certificate-middle {
+  margin-top: 75px;
+}
+
+.certificate-middle > span {
+  color: #4777ed;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+}
+
+.certificate-middle h3 {
+  max-width: 450px;
+  margin: 12px 0 0;
+
+  font-family: var(--heading-font);
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: 0.03em;
+}
+
+.certificate-bottom {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+
+  color: #69758c;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 2, 8, 0.82);
+  backdrop-filter: blur(12px);
+}
+
+.certificate-modal-box {
+  width: min(900px, 100%);
+  height: min(750px, 90vh);
+
+  background: #050917;
+  border: 1px solid rgba(85, 110, 170, 0.3);
+  border-radius: 6px;
+
+  overflow: hidden;
+}
+
+.modal-header {
+  min-height: 80px;
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(85, 110, 170, 0.15);
+}
+
+.modal-header span {
+  color: #4e78ed;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.modal-header h3 {
+  margin: 3px 0 0;
+
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.modal-header button {
+  border: 0;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.certificate-modal-box iframe {
+  width: 100%;
+  height: calc(100% - 80px);
+  border: 0;
+}
+
+@media (max-width: 767px) {
+  .certificates-section {
+    padding: 90px 0 100px;
+  }
+
+  .certificates-title-row h2 {
+    font-size: 3.4rem;
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-middle {
+    margin-top: 60px;
+  }
+
+  .certificate-middle h3 {
+    font-size: 1.9rem;
+  }
+
+  .certificate-modal {
+    padding: 15px;
+  }
+
+  .certificate-modal-box {
+    height: 85vh;
+  }
+}

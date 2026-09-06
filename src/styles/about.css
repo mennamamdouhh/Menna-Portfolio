@@ -1,0 +1,149 @@
+.about-section {
+  padding: 8rem 0;
+  background: var(--background);
+  overflow: hidden;
+}
+
+.about-image {
+  position: relative;
+  width: 100%;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.about-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.about-image::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  border: 1px solid rgba(0, 60, 255, 0.2);
+  pointer-events: none;
+}
+
+.about-image-corner {
+  position: absolute;
+  color: var(--blue);
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.top-left {
+  top: 0.7rem;
+  left: 0.9rem;
+}
+
+.bottom-right {
+  right: 0.9rem;
+  bottom: 0.7rem;
+}
+
+.about-content {
+  max-width: 42rem;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.about-content h2 {
+  font-family: var(--heading-font);
+  margin: 0 0 1.2rem;
+  font-size: clamp(0.8rem, 5vw, 2.7rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.about-content h2 span {
+  color: var(--blue);
+  display: block;
+}
+
+.about-content > p {
+  margin-bottom: 1rem;
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-highlight {
+  display: flex;
+  gap: 1.2rem;
+  margin: 2rem 0;
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.about-highlight span {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.about-highlight p {
+  margin: 0;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.8rem 1.3rem;
+  border: 1px solid var(--gray);
+  border-radius: 2rem;
+  color: var(--white);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  transition: 0.3s ease;
+}
+
+.cv-button span {
+  color: var(--blue);
+  font-size: 1rem;
+}
+
+.cv-button:hover {
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.cv-button:hover span {
+  color: var(--white);
+}
+@media (max-width: 48rem) {
+  .about-section {
+    padding: 5rem 0;
+  }
+
+  .about-image {
+    max-width: 24rem;
+  }
+
+  .about-content h2 {
+    font-size: 2.7rem;
+  }
+
+  .about-content > p {
+    font-size: 0.95rem;
+  }
+
+  .about-highlight {
+    gap: 0.8rem;
+  }
+}
