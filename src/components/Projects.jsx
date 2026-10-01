@@ -34,7 +34,7 @@ const projects = [
     tags: ["JavaScript", "HTML", "CSS"],
     image: "images/card-form.png",
     link: "https://mennamamdouhh.github.io/Interactive-card-details-form/",
-  }
+  },
 ];
 
 export default function Projects() {
@@ -163,7 +163,10 @@ export default function Projects() {
                     rel="noreferrer"
                     className="project-image-wrapper"
                   >
-                    <img src={`${import.meta.env.BASE_URL}project.image`} alt={project.title} />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${project.image}`}
+                      alt={project.title}
+                    />
 
                     <div className="project-image-overlay">
                       <span>VIEW PROJECT</span>

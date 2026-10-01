@@ -39,7 +39,7 @@ export default function Navbar() {
             </a>
           ))}
 
-          <a href="/CV.pdf" className="nav-cv">
+          <a href={`${import.meta.env.BASE_URL}cv.pdf`} className="nav-cv" target="blank">
             CV
             <ArrowUpRight size={15} />
           </a>
